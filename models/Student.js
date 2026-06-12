@@ -85,6 +85,11 @@ const studentSchema = new mongoose.Schema({
     enum: ['pending', 'approved', 'rejected'],
     default: 'pending'
   },
+  studentType: {
+    type: String,
+    enum: ['new', 'returning', 'graduated', 'experts', 'conducted'],
+    default: 'new'
+  },
   registrationFee: {
     type: Number,
     default: 500
