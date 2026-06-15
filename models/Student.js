@@ -69,7 +69,7 @@ const studentSchema = new mongoose.Schema({
   courseDuration: {
     type: String,
     required: [true, 'Course duration is required'],
-    enum: ['6-10 Months', '4-8 Months', '3-6 Months', '2-4 Months']
+    enum: ['3 Months', '6 Months', '10 Months']
   },
   profileImage: {
     type: String,
