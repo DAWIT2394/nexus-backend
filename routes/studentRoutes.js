@@ -8,9 +8,11 @@ const {
   getStudentById,
   updateStudentStatus,
   deleteStudent,
-  getStatistics
+  getStatistics,
+  updateStudent,
+  registerStudentPortal
 } = require('../controllers/studentController');
-
+const { login } = require('../controllers/authController');
 // Public routes
 router.post(
   '/register',
@@ -25,5 +27,8 @@ router.get('/students/:id', getStudentById);
 router.get('/statistics', getStatistics);
 router.put('/students/:id/status', updateStudentStatus);
 router.delete('/students/:id', deleteStudent);
+router.put('/students/:id', upload.single('profileImage'), updateStudent);
+router.post('/students/portal', upload.single('profileImage'), registerStudentPortal);
+router.post('/admin/login',login )
 
 module.exports = router;
