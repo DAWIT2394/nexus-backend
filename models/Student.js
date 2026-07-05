@@ -8,23 +8,19 @@ const studentSchema = new mongoose.Schema({
     minlength: [3, 'Full name must be at least 3 characters'],
     maxlength: [100, 'Full name cannot exceed 100 characters']
   },
-  age: {
-    type: Number,
-    required: [true, 'Age is required'],
-    min: [15, 'Minimum age is 15'],
-    max: [60, 'Maximum age is 60']
-  },
+ age: {
+  type: Number,
+  required: [true, 'Age is required']
+},
   weight: {
     type: Number,
     required: [true, 'Weight is required'],
-    min: [30, 'Weight must be at least 30kg'],
-    max: [200, 'Weight cannot exceed 200kg']
+    
   },
   height: {
     type: Number,
     required: [true, 'Height is required'],
-    min: [120, 'Height must be at least 120cm'],
-    max: [220, 'Height cannot exceed 220cm']
+   
   },
   sex: {
     type: String,
