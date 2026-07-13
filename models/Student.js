@@ -11,8 +11,7 @@ const studentSchema = new mongoose.Schema({
  age: {
     type: Number,
     required: [true, 'Age is required'],
-    min: [4, 'Age must be at least 4 years old'],
-    max: [18, 'Age cannot exceed 18 years old']
+ 
   },
   weight: {
     type: Number,
