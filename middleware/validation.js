@@ -7,7 +7,7 @@ const validateStudentRegistration = [
     .isLength({ min: 3, max: 100 }).withMessage('Full name must be between 3 and 100 characters'),
   
   body('age')
-    .isInt({ min: 15, max: 60 }).withMessage('Age must be between 15 and 60'),
+    .isInt({ min: 0, max: 60 }).withMessage('Age must be between 15 and 60'),
   
   body('weight')
     .isFloat({ min: 30, max: 200 }).withMessage('Weight must be between 30kg and 200kg'),
